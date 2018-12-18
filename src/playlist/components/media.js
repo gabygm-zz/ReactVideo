@@ -14,13 +14,13 @@ class Media extends Component {
 		}*/
 		return(
 			<div className="Media">
-			  <img src="./images/covers/cover.jpg"
+			  <img className ="Media-imagen" src="./images/covers/cover.jpg"
                   alt=""
                   width={230}
                   height={160}
 			  />
-			  <h3>¿First Media?</h3>
-			  <p>Gaby G.</p>
+			  <h3 className="Media-title">¿First Media?</h3>
+			  <p className="Media-author" >Gaby G.</p>
 			</div>
 			)
 	}
