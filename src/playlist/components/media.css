@@ -1,19 +1,41 @@
 .Media {
 	cursor: pointer;
 	margin-right: 15px;
+	margin-left: 15px;
 	display: inline-block;
-	width: 260px;
-    vertical-align: top;	
+	width: 210px;
+    vertical-align: top;
+    border: solid 1px #bdbdbd;
+    padding: 2%;
+    background-color: #fafafa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 98%;
 }
 
 .Media-imagen{
+	object-fit:cover;
 	
+
 }
 
 .Media-title{
+	text-align: center;
+	color: #b71c1c ;
+	font-size: 16px;
+
 
 }
 
 .Media-author{
+	text-align: justify;
+	color: #424242;
+	font-style: oblique;
 
 }
+
