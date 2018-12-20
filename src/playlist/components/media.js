@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 //React.Component
-import './media.css'
+import './media.css';
+import PropTypes from 'prop-types';
+
 class Media extends Component {
 	render(){
 		/*const styles = {
@@ -14,14 +16,15 @@ class Media extends Component {
 		}*/
 		return(
 			<div className="Media">
-			  <img className ="Media-imagen center" src="./images/covers/cover.jpg"
+			  <img className ="Media-imagen center" 
+			      src={this.props.image}
                   alt=""
                   width={200}
                   height={140}
 			  />
-			  <h3 className="Media-title">Why should you learn React?</h3>
+			  <h3 className="Media-title">{this.props.title}</h3>
 			  <hr/>
-			  <p className="Media-author" >React makes it painless to create interactive UIs.
+			  <p className="Media-author" >{this.props.author}
 			  </p>
 			 
 			</div>
@@ -29,4 +32,12 @@ class Media extends Component {
 	}
 
 }
+Media.propTypes = {
+     image: PropTypes.string.isRequired,
+  	 title: PropTypes.string,
+  	 author: PropTypes.string,
+	type: PropTypes.oneOf(['video', 'audio']),
+
+	//number, object, func, array, bool
+};
 export default Media;
