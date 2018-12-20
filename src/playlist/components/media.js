@@ -4,7 +4,27 @@ import './media.css';
 import PropTypes from 'prop-types';
 
 class Media extends Component {
+	//constructor(props){
+	//	super(props)
+	//	this.state = {
+	//		author: props.author
+	//	}
+	//	//for each event is not convenient
+		//this.handleClick = this.handleClick.bind(this)
+
+	//}
+	state = {
+		author: 'dsdsd'
+	}
+	//arrow funtion => inherit contest his father is very important to optimeze code
+	handleClick = (event) => {
+		this.setState({
+			author: 'Gaby'
+		})
+
+	}
 	render(){
+
 		/*const styles = {
 			container: {
 				color: '#44546b',
@@ -15,7 +35,7 @@ class Media extends Component {
 			}
 		}*/
 		return(
-			<div className="Media">
+			<div className="Media" onClick={this.handleClick}>
 			  <img className ="Media-imagen center" 
 			      src={this.props.image}
                   alt=""
@@ -24,7 +44,7 @@ class Media extends Component {
 			  />
 			  <h3 className="Media-title">{this.props.title}</h3>
 			  <hr/>
-			  <p className="Media-author" >{this.props.author}
+			  <p className="Media-author" >{this.state.author}
 			  </p>
 			 
 			</div>
