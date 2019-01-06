@@ -24,16 +24,6 @@ class Media extends Component {
 
 	}
 	render(){
-
-		/*const styles = {
-			container: {
-				color: '#44546b',
-				width: '245px',
-				cursor:'pointer',
-				border:'1px solid red',
-				padding:'4px'
-			}
-		}*/
 		return(
 			<div className="Media" onClick={this.handleClick}>
 			  <img className ="Media-imagen center" 

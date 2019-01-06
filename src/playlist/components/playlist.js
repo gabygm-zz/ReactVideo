@@ -7,19 +7,28 @@ import Media from './media.js';
 class Playlist extends Component {
 	render(){
         
-		const playlist = this.props.data.categories[0].playlist
-		console.log(this.props.data);
-		return(
-          <div className="Playlist" >
+		//const playlist = this.props.data.categories[0].playlist
+    const play = this.props.data
+    return(
+          <div>
             {
-            	playlist.map((item)=>{
-            	 //return	<Media title = {item.title} key={item.id}/>
-            	 return	<Media {...item} key={item.id} />
-            	})
+              play.categories.map((playlist)=>{
+                return(
+                      <div className="Playlist" >
+                        {
+                          playlist.playlist.map((item)=>{
+                           //return <Media title = {item.title} key={item.id}/>
+                           return <Media {...item} key={item.id} />
+                          })
+                        }
+                    
+                      </div>
+                )
+              })
             }
-        
-          </div>
-		)
+            </div>
+    )
+
 	}
 }
 
