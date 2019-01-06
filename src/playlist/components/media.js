@@ -14,7 +14,7 @@ class Media extends Component {
 
 	//}
 	state = {
-		author: 'dsdsd'
+		author: 'Gabriela Guaman'
 	}
 	//arrow funtion => inherit contest his father is very important to optimeze code
 	handleClick = (event) => {
@@ -37,14 +37,14 @@ class Media extends Component {
 		return(
 			<div className="Media" onClick={this.handleClick}>
 			  <img className ="Media-imagen center" 
-			      src={this.props.image}
+			      src={this.props.cover}
                   alt=""
                   width={200}
                   height={140}
 			  />
 			  <h3 className="Media-title">{this.props.title}</h3>
 			  <hr/>
-			  <p className="Media-author" >{this.state.author}
+			  <p className="Media-author" >{this.props.author}
 			  </p>
 			 
 			</div>
@@ -53,7 +53,7 @@ class Media extends Component {
 
 }
 Media.propTypes = {
-     image: PropTypes.string.isRequired,
+     cover: PropTypes.string,
   	 title: PropTypes.string,
   	 author: PropTypes.string,
 	type: PropTypes.oneOf(['video', 'audio']),
