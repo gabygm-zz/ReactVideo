@@ -2,5 +2,6 @@
 	overflow-x: auto;
 	white-space: nowrap;
 	overflow-y: hidden;
-	padding-bottom: 20px;
+	padding-bottom: 1%;
+	margin-bottom: 1%;
 }

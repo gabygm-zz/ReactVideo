@@ -32,7 +32,7 @@ class Media extends Component {
                   width={200}
                   height={140}
 			  />
-			  <h3 className="Media-title">{this.props.title}</h3>
+			  <div className="Media-title"> {this.props.title}</div>
 			  <hr/>
 			  <p className="Media-author" >{this.props.author}
 			  </p>
