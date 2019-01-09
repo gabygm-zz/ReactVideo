@@ -46,7 +46,7 @@ Media.propTypes = {
      cover: PropTypes.string,
   	 title: PropTypes.string,
   	 author: PropTypes.string,
-	type: PropTypes.oneOf(['video', 'audio']),
+	 type: PropTypes.oneOf(['video', 'audio']),
 
 	//number, object, func, array, bool
 };
