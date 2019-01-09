@@ -4,7 +4,7 @@ import './related.css'
 function Related(props){
  	return(
     	<div className="Related">
-    		<img  className="center" src={logo} width={180} height={160}/>
+    		<img  className="center" src={logo} width={190} height={160}/>
     	</div>
  		)
  }
