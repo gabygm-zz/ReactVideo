@@ -11,21 +11,20 @@ class Media extends Component {
 	//	}
 	//	//for each event is not convenient
 		//this.handleClick = this.handleClick.bind(this)
-
 	//}
 	state = {
 		author: 'Gabriela Guaman'
 	}
 	//arrow funtion => inherit contest his father is very important to optimeze code
-	handleClick = (event) => {
+	/*handleClick = (event) => {
 		this.setState({
 			author: 'Gaby'
 		})
+	}*/
 
-	}
 	render(){
 		return(
-			<div className="Media" onClick={this.handleClick}>
+			<div className="Media" onClick={this.props.handleClick}>
 			  <img className ="Media-imagen center" 
 			      src={this.props.cover}
                   alt=""
@@ -35,13 +34,12 @@ class Media extends Component {
 			  <div className="Media-title"> {this.props.title}</div>
 			  <hr/>
 			  <p className="Media-author" >{this.props.author}
-			  </p>
-			 
+			  </p>		 
 			</div>
 			)
 	}
-
 }
+
 Media.propTypes = {
      cover: PropTypes.string,
   	 title: PropTypes.string,
