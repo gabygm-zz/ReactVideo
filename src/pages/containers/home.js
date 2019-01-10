@@ -2,8 +2,10 @@ import React, {Component} from 'react';
 import HomeLayout from '../components/homeLayout';
 import Categories from '../../playlist/categories/components/categories';
 import Related from '../components/related';
-import ModalContainer from "../../widgets/containers/modal"
-import Modal from '../../widgets/components/modal'
+import ModalContainer from "../../widgets/containers/modal";
+import Modal from '../../widgets/components/modal';
+import HandleError from '../../error/containers/handleError'
+
 class Home extends Component {
 	state = {
 		modalVisible: false
@@ -22,6 +24,7 @@ class Home extends Component {
 	}
 	render(){
 	    return(
+	    	<HandleError>
 			   <HomeLayout>
 			     <Related/>
 				  <Categories categories={this.props.data.categories}
@@ -34,9 +37,8 @@ class Home extends Component {
 					  	</Modal>
 					</ModalContainer>
                   }
-
-
 				</HomeLayout>
+			</HandleError>
 			)
 		}
 }
