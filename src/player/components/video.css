@@ -1,0 +1,13 @@
+.Video{
+    width: inherit;
+}
+.Videovideo{
+    width: inherit;
+    vertical-align: middle;
+}
+
+.VideoPlayer {
+  width: 100%;
+  position: relative;
+  background: black;
+}
