@@ -16,13 +16,20 @@ class VideoPlayer extends Component {
     })
   }
 
+  componentDidMount(){
+    this.setState({
+      pause: (!this.props.autoplay)
+    })
+  }
+
 	render(){
 		return(
            <VideoPlayerLayout>
              <Title title="Hola GAby"/>
              <PlayPause pause={this.state.pause} handleClick={this.togglePlay}/>
              <Video
-                autoPlay={true}
+                autoplay={this.props.autoplay}
+                pause={this.state.pause}
                 src="http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4"
 
              />
