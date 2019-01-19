@@ -22,8 +22,8 @@ export default class Video extends Component {
 
 	render(){
 		return(
-           <div className="Videovideo">
-	           <video
+           <div className="">
+	           <video className="BoxVideo"
 	                ref={this.setRef}
 	  				autoPlay={this.props.autoplay}
 	  				src={this.props.src}

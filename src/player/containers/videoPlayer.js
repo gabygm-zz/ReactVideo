@@ -11,6 +11,7 @@ class VideoPlayer extends Component {
 
   togglePlay = (event) => {
     this.setState({
+      //swich
       pause:!this.state.pause
 
     })
@@ -18,6 +19,7 @@ class VideoPlayer extends Component {
 
   componentDidMount(){
     this.setState({
+      //return tru or false
       pause: (!this.props.autoplay)
     })
   }
