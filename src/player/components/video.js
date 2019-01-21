@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './video.css'
+import './video.css';
 
 export default class Video extends Component {
 	togglePLay(){
@@ -10,9 +10,14 @@ export default class Video extends Component {
 		}
 	}
 
+	state = {
+		onTime: 0
+	}
+
     setRef = element =>{
     	this.video = element;
     }
+
 
 	componentWillReceiveProps(nextProps){
 		if (nextProps.pause !== this.props.pause){
@@ -20,13 +25,22 @@ export default class Video extends Component {
 		}
 	}
 
+	
+
 	render(){
+		const {
+			handleLoadedMetadata,
+			handleTimeUpdate
+		} = this.props
+
 		return(
            <div className="">
 	           <video className="BoxVideo"
 	                ref={this.setRef}
 	  				autoPlay={this.props.autoplay}
 	  				src={this.props.src}
+	  				onLoadedMetadata={handleLoadedMetadata}
+	  				onTimeUpdate={handleTimeUpdate}
 	            />
            </div>
 			)
